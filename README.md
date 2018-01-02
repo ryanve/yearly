@@ -69,7 +69,7 @@ npm install edit-file yearly --save-dev
 ```
 
 ```js
-const edit-file = require("edit-file")
+const editFile = require("edit-file")
 const yearly = require("yearly")
 
 editFile("LICENSE", yearly.bump)

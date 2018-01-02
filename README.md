@@ -79,7 +79,7 @@ editFile("LICENSE", yearly.bump)
 git diff
 ```
 
-## `npm test` output logs bump examples
+## `npm test` logs bump examples
 
 ```
 node test

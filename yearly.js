@@ -29,7 +29,7 @@
     return String(localYear)
   }
 
-  return Object.seal({
+  return Object.freeze({
     "bump": bump,
     "express": express,
     "full": full,

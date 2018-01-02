@@ -1,0 +1,32 @@
+{
+  "name": "yearly",
+  "version": "0.0.0",
+  "description": "Year utility to test or bump year in a string or file",
+  "author": "Ryan Van Etten",
+  "license": "CC0-1.0",
+  "main": "yearly.js",
+  "scripts": {
+    "pretest": "eslint .",
+    "preversion": "npm test",
+    "test": "node test"
+  },
+  "homepage": "https://github.com/ryanve/yearly#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanve/yearly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanve/yearly/issues"
+  },
+  "keywords": [
+    "date",
+    "year",
+    "years",
+    "license",
+    "copyright",
+    "javascript"
+  ],
+  "devDependencies": {
+    "eslint": "^4.14.0"
+  }
+}

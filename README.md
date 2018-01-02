@@ -53,12 +53,13 @@ npm install yearly --save-dev
 ```
 
 ```js
-const fs = require("fs")
 const yearly = require("yearly")
 const assert = require("assert")
+const fs = require("fs")
 
 assert.ok(
-  yearly.test(fs.readFileSync("LICENSE", "utf-8"))
+  yearly.test(fs.readFileSync("LICENSE")),
+  "Please update LICENSE to current year: " + yearly.full()
 )
 ```
 

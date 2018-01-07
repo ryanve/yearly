@@ -80,6 +80,36 @@ editFile("LICENSE", yearly.bump)
 git diff
 ```
 
+### hook into [`npm version`](https://docs.npmjs.com/cli/version) commit
+
+```
+npm install edit-file said yearly --save-dev
+```
+
+Create a `yearly.js` file in your package
+
+```js
+const yearly = require("yearly")
+const editFile = require("edit-file")
+const said = require("said")
+
+editFile("LICENSE", yearly.bump, err => {
+  if (err) throw err
+  if (said("git diff LICENSE")) {
+    said("git add LICENSE")
+    console.log("Updated: LICENSE")
+  }
+})
+```
+
+Use [`version`](https://docs.npmjs.com/misc/scripts) script in your `package.json`
+
+```json
+"scripts": {
+  "version": "node yearly"
+}
+```
+
 ## `npm test` logs bump examples
 
 ```
